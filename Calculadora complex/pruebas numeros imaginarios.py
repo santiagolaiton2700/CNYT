@@ -25,5 +25,11 @@ class TestCases(unittest.TestCase):
     def test_polar_cartesianas(self):
         a=(2,90)
         self.assertEqual(calculator.polar_a_cartesiano(a),(1.2246467991473532e-16,2.0))
+    def test_cartesiano_polar(self):
+        a=(1.2246467991473532e-16,2.0)
+        self.assertEqual(calculator.cartesiano_a_polar(a),(1024.0, 90.0))
+    def test_fase(self):
+        a=(6,7)
+        self.assertEqual(calculator.fase(a),(0.8621700546672264))
 if __name__=="__main__":
     unittest.main()
