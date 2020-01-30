@@ -77,7 +77,7 @@ Si desea utilizar la calculadora debe seguir los siguientes pasos
 * _Carnet : 2145059
 * _Calculadora_
 * _Santiago Agustin Laiton Cubides_
-*_Santiago.laiton@mail.escuelaing.edu.co
+* _Santiago.laiton@mail.escuelaing.edu.co_
 
 ## Referencias Bibliograficas
 *Quantum Computing for computer Scientists
