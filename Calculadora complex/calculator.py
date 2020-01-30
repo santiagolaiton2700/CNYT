@@ -57,7 +57,7 @@ def polar_a_cartesiano(a):
     return (hipotenusa*math.cos(teta),hipotenusa*math.sin(teta))
 
 def cartesiano_a_polar(a):
-    teta=math.atan(a[1]/a[0])
+    teta=math.atan2(a[1],a[0])
     return((a[0]**2+a[1]**2)**5,teta*(180/math.pi))
 
 def fase(a):
