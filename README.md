@@ -1,6 +1,6 @@
 # CNYT
 Ciencias Naturales y Tecnologia 
-
+![](Imagenes/82823617_852546755200671_7687157583349547008_n.jpg)
 ## Contenido
 >
 * Suma 
@@ -9,7 +9,15 @@ Ciencias Naturales y Tecnologia
 * División
 * Conjugado
 * Modulo
-* Polar 
+* Conjugado
+* polar a cartesiano
+* cartesiano a polar
+* fase
+* suma vectorial
+* inverso vectorial
+* multiplicacion de vector por un escalar
+
+
 ## Suma 
 
 _La **suma de números complejos** se realiza sumando partes reales entre sí y partes imaginarias entre sí._
@@ -42,19 +50,35 @@ _Se llama **módulo** de un número complejo _z_ = (_a_,_b_) a la distancia del 
 
 Para las pruebas se pudo probar distintas funciones del codigo que garantiza su correcta funcionalidad. Los metodos que se colocaron a prueba fueron:
 > 
-* Suma de vectores complejos 
-* Multiplicacion vector por escalar 
+* Suma 
+* Reta
+* Multiplicación
+* División
+* Conjugado
+* Modulo
+* Conjugado
+* polar a cartesiano
+* cartesiano a polar
+* fase
+* suma vectorial
+* inverso vectorial
+* multiplicacion de vector por un escalar
+
 
 ### Para compilar las pruebas 
-El Archivo de calculadoraTest.py debe estar en la misma carpeta de calculadora.py._
+Los Archivos de pruebas numeros imaginarios.py y pruebas vectores y matrices.py debe estar en la misma carpeta de calculator.py._
 
 ### Uso de la calculadora
 Si desea utilizar la calculadora debe seguir los siguientes pasos
 ~~~
- Inicia con f5 el archivo con extesión py para poder hacer uso de las opereaciones o si quiere mirar si las pruebas funcionan bien.
+* para Iniciar las pruebas debe iniciar el archivo que esta en la misma carpeta de la calculadora y debe de presionar f5 para corran las pruebas y ver si hay fallos o todas corren bine.
 ~~~
 
 * _Carnet : 2145059
 * _Calculadora_
 * _Santiago Agustin Laiton Cubides_
+*_Santiago.laiton@mail.escuelaing.edu.co
+
+## Referencias Bibliograficas
+*Quantum Computing for computer Scientists
 
