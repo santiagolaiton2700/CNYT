@@ -1,5 +1,6 @@
 from sys import stdin
 import math
+
 def suma(a,b):
     reala=a[0]
     realb=b[0]
@@ -82,4 +83,75 @@ def multiplicaionVectorEscalar(vector,escalar):
         temp.append(multi(vector[i],(escalar,0)))
     return temp
 
+def suma_matrices_complejos(matriz1,matriz2):
+    if len(matriz1)!=len(matriz2) or len(matriz1[0])!=len(matriz2):
+        raise "La suma no se puede realizar por que las matrices debe ser de la misma dimension"
+    else:
+        final=[]
+        for i in range (len(matriz1)):
+            tempo=[]
+            for j in range (len(matriz2)):
+                sumado=suma(matriz1[i][j],matriz2[i][j])
+                tempo.append(sumado)
+            final.append(tempo)
+        return final
+def matriz_inversa(matriz):
+    final=[]
+    for i in range (len(matriz)):
+        tempo=[]
+        inverso=inversa_vector(matriz[i])
+        final.append(inverso)
+    return final
+
+
+def multiplicacion_matriz_Escalar(matriz,escalar):
+    final=[]
+    for i in range (len(matriz)):
+        inversa=multiplicaionVectorEscalar(matriz[i],escalar)
+        final.append(inversa)
+    return final
+
+def matriz_conjugada(matriz):
+    final=[]
+    for i in range(len(matriz)):
+        tempo=[]
+        for j in range(len(matriz[0])):
+            respuesta=conjugado(matriz[i][j])
+            tempo.append(respuesta)
+        final.append(tempo)
+    return final
+def matriz_transpuesta(matriz):
+    transpuesta=[None]*len(matriz[0])
+    for i in range(len(matriz)):
+        transpuesta[i]=[None]*len(matriz)
+        for j in range(len(matriz[i])):    
+            transpuesta[i][j]=matriz[j][i]
+    return transpuesta
+                         
+def matriz_adjunta(matriz):
+    a=matriz_conjugada(matriz)
+    b=matriz_transpuesta(a)
+    return b
+def matriz_normal(matriz):
+    real=0
+    ima=0
+    for i in range(len(matriz)):
+        caso1=matriz[i][0]
+        real +=math.pow(caso1[0],2)
+        ima +=math.pow(caso1[1],2)
+    return ((math.sqrt(real)),(math.sqrt(ima)))
+
+
+def matriz_hermitian(matriz):
+    if len(matriz) != len(matriz[0]):  raise 'La matriz no es cuadrada'
+    else:
+        return matriz == matriz_adjunta(matriz)
+def tensor(vector1,vector2):
+    fin=[]
+    for x in range(len(vector1)):
+        tempo=[]
+        for y in range(len(vector2)):
+            tempo.append(multi(vector1[x],vector2[y]))
+        fin.append(tempo)
+    return fin
 
