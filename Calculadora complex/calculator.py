@@ -146,7 +146,8 @@ def matriz_hermitian(matriz):
     if len(matriz) != len(matriz[0]):  raise 'La matriz no es cuadrada'
     else:
         return matriz == matriz_adjunta(matriz)
-def tensor(vector1,vector2):
+    
+def tensorVector(vector1,vector2):
     fin=[]
     for x in range(len(vector1)):
         tempo=[]
@@ -154,4 +155,28 @@ def tensor(vector1,vector2):
             tempo.append(multi(vector1[x],vector2[y]))
         fin.append(tempo)
     return fin
+
+def tensorMatrices(mat1,mat2):
+    fin=[]
+    for i in range(len(mat1)):
+        for j in range(len(mat2)):
+             fin.append(tensorVector(mat1[i],mat2[j]))
+    for k in fin:
+        print(k)
+
+escalar=1/2**(1/2)
+matriz=[[(1,0),(1,0)],[(1,0),(-1,0)]]
+x=[[(0,0),(1,0)],[(1,0),(0,0)]]
+H=multiplicacion_matriz_Escalar(matriz,escalar)
+print("HH producto tensor")
+M2=tensorMatrices(H,H)
+
+
+
+
+
+
+
+
+
 
