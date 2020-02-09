@@ -43,6 +43,6 @@ class TestCases(unittest.TestCase):
     def test_tensor(self):
         a=[(2,3),(2,3)]
         b=[(3,4),(2,4)]
-        self.assertEqual(calculator.tensor(a,b),[[(-6, 17), (-8, 14)], [(-6, 17), (-8, 14)]])
+        self.assertEqual(calculator.tensorVector(a,b),[[(-6, 17), (-8, 14)], [(-6, 17), (-8, 14)]])
 if __name__=="__main__":
   unittest.main()
