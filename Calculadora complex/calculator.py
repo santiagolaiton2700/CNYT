@@ -161,18 +161,7 @@ def tensorMatrices(mat1,mat2):
     for i in range(len(mat1)):
         for j in range(len(mat2)):
              fin.append(tensorVector(mat1[i],mat2[j]))
-    for k in fin:
-        print(k)
-
-escalar=1/2**(1/2)
-matriz=[[(1,0),(1,0)],[(1,0),(-1,0)]]
-x=[[(0,0),(1,0)],[(1,0),(0,0)]]
-H=multiplicacion_matriz_Escalar(matriz,escalar)
-print("HH producto tensor")
-M2=tensorMatrices(H,H)
-
-
-
+    return fin
 
 
 
