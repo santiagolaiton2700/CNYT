@@ -120,6 +120,12 @@ def matriz_conjugada(matriz):
             tempo.append(respuesta)
         final.append(tempo)
     return final
+def vector_conjugado(vector):
+    final=[]
+    for k in vector:
+        answer=conjugado(k)
+        final.append(answer)
+    return final
 def matriz_transpuesta(matriz):
     transpuesta=[None]*len(matriz[0])
     for i in range(len(matriz)):
@@ -127,10 +133,42 @@ def matriz_transpuesta(matriz):
         for j in range(len(matriz[i])):    
             transpuesta[i][j]=matriz[j][i]
     return transpuesta
-                         
+def vector_transpuesto(vector):
+    return vector
 def matriz_adjunta(matriz):
     a=matriz_conjugada(matriz)
     b=matriz_transpuesta(a)
+    return b
+def vector_adjunto(vector):
+    a=vector_conjugado(vector)
+    b=vector_transpuesto(a)
+    return b
+def multiplicacion_matrices(m1,m2):
+    final=[]
+    if len(m1)==len(m2):
+        for a in range(len(m1)):
+            answer=[]
+            for b in range(len(m2[0])):
+                enviar=(0,0)
+                for c in range(len(m2)):
+                    enviar=suma(enviar,multi(m1[a][c],m2[c][b]))
+                answer.append(enviar)
+            final.append(answer)
+        return final
+    else:
+         raise 'La longitud de las dos matrices no son iguales'
+def multiplicacion_vectores(vect1,vect2):
+    respuesta=[]
+    if len(vect1)==len(vect2):
+        final=(0,0)
+        for i in range(len(vect1)):
+            final=suma(final,multi(vect1[i],vect2[i]))
+        return final
+    else:
+        raise 'La longitud de los dos vectores no son iguales'
+def producto_interno_vectores(vector1,vector2):
+    a=vector_conjugado(vector1)
+    b=multiplicacion_vectores(a,vector2)
     return b
 def matriz_normal(matriz):
     real=0
@@ -140,13 +178,10 @@ def matriz_normal(matriz):
         real +=math.pow(caso1[0],2)
         ima +=math.pow(caso1[1],2)
     return ((math.sqrt(real)),(math.sqrt(ima)))
-
-
 def matriz_hermitian(matriz):
     if len(matriz) != len(matriz[0]):  raise 'La matriz no es cuadrada'
     else:
-        return matriz == matriz_adjunta(matriz)
-    
+        return matriz == matriz_adjunta(matriz)    
 def tensorVector(vector1,vector2):
     fin=[]
     for x in range(len(vector1)):
@@ -155,16 +190,28 @@ def tensorVector(vector1,vector2):
             tempo.append(multi(vector1[x],vector2[y]))
         fin.append(tempo)
     return fin
-
+def distancia_vectorial(vector1,vector2):
+    real=(vector1[0]-vector2[0])**2
+    imaginaria=(vector1[1]-vector2[1])**2
+    respuesta=(real+imaginaria)**0.5
+    return respuesta
+def unitaria(matriz1):
+    adjunta=matriz_adjunta(matriz1)
+    multiplicada=multiplicacion_matrices(matriz1,adjunta)
+    for i in range(len(matriz1)):
+        for k in range(len(matriz1)):
+            estado=multiplicada[i][k]
+            if i==k and (estado[0]!=1 or posicion[1]!=0):
+                return False
+            elif(i!=k and (estado[0]!=0 or estado[1]!=0)):
+                return False
+    return True 
 def tensorMatrices(mat1,mat2):
     fin=[]
     for i in range(len(mat1)):
         for j in range(len(mat2)):
              fin.append(tensorVector(mat1[i],mat2[j]))
     return fin
-
-
-
 
 
 
