@@ -10,13 +10,30 @@ Ciencias Naturales y Tecnologia
 * Conjugado
 * Modulo
 * Conjugado
-* polar a cartesiano
-* cartesiano a polar
-* fase
-* suma vectorial
-* inverso vectorial
-* multiplicacion de vector por un escalar
-
+* Polar a cartesiano
+* Cartesiano a polar
+* Fase
+* Suma vectorial
+* Inverso vectorial
+* Multiplicacion de vector por un escalar
+* Suma Matriz
+* Matriz Inversa
+* Multiplicacion de matriz por un escalar
+* Matriz Conjugada
+* Vector Conjugado
+* Matriz Transpuesta
+* Vector Transpuesto
+* Vector Adjunto
+* Matriz Conjugada
+* Producto Matriz
+* Producto Vector
+* Matriz Adjunta
+* Matriz Normal
+* Distancia Vector
+* Matriz Unitaria
+* Matriz Tensor
+* Matriz Hermitiana
+* Vector Tensor
 
 ## Suma 
 
