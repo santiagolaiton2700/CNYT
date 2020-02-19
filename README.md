@@ -80,6 +80,22 @@ Para las pruebas se pudo probar distintas funciones del codigo que garantiza su 
 * suma vectorial
 * inverso vectorial
 * multiplicacion de vector por un escalar
+* Matriz Conjugada
+* Vector Conjugado
+* Matriz Transpuesta
+* Vector Transpuesto
+* Vector Adjunto
+* Matriz Conjugada
+* Producto Matriz
+* Producto Vector
+* Matriz Adjunta
+* Matriz Normal
+* Distancia Vector
+* Matriz Unitaria
+* Matriz Tensor
+* Matriz Hermitiana
+* Vector Tensor
+
 
 
 ### Para compilar las pruebas 
