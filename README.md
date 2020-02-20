@@ -99,7 +99,7 @@ Para las pruebas se pudo probar distintas funciones del codigo que garantiza su 
 
 
 ### Para compilar las pruebas 
-El Archivo de las pruebas se llama pruebas.py debe estar en la misma carpeta de calculator.py._
+_l Archivo de las pruebas se llama pruebas.py debe estar en la misma carpeta de calculator.py._
 ### Uso de la calculadora
 Si desea utilizar la calculadora debe seguir los siguientes pasos
 ~~~
