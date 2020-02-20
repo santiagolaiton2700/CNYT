@@ -99,17 +99,15 @@ Para las pruebas se pudo probar distintas funciones del codigo que garantiza su 
 
 
 ### Para compilar las pruebas 
-_l Archivo de las pruebas se llama pruebas.py debe estar en la misma carpeta de calculator.py._
+_El Archivo de las pruebas se llama pruebas.py debe estar en la misma carpeta de calculator.py._
 ### Uso de la calculadora
 Si desea utilizar la calculadora debe seguir los siguientes pasos
 ~~~
 * para Iniciar las pruebas debe iniciar el archivo que esta en la misma carpeta de la calculadora y debe de presionar f5 para corran las pruebas y ver si hay fallos o todas corren bine.
 ~~~
-
-* _Carnet : 2145059
 * _Calculadora_
 * _Santiago Agustin Laiton Cubides_
-* _Santiago.laiton@mail.escuelaing.edu.co_
+* _saagulaicu@hotmail.com_
 
 ## Referencias Bibliograficas
 *Quantum Computing for computer Scientists
