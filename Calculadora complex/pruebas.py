@@ -103,7 +103,7 @@ class TestCases(unittest.TestCase):
     def test_unitaria(self):
         a=[[(4, 6), (6, 4)], [(6, 4), (8, 6)]]
         self.assertEqual(calculator.unitaria(a),False)
-    def test_tensor_metrices(self):
+    def test_tensor_matrices(self):
         a=[[(6, 4), (8, 6)],[(3,5),(6,2)]]
         b=[[(6, 4), (8, 6)],[(3,5),(6,2)]]
         self.assertEqual(calculator.tensorMatrices(a,b),[[[(20, 48), (24, 68)], [(24, 68), (28, 96)]], [[(-2, 42), (28, 36)], [(-6, 58), (36, 52)]], [[(-2, 42), (-6, 58)], [(28, 36), (36, 52)]], [[(-16, 30), (8, 36)], [(8, 36), (32, 24)]]])
