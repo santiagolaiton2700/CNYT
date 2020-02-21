@@ -97,7 +97,7 @@ Para las pruebas se pudo probar distintas funciones del codigo que garantiza su 
 * Vector Tensor
 
 ### Licencia
-_Esta libreria es de uso **GRATUITO
+_Esta libreria es de uso **GRATUITO_
 
 ### Para compilar las pruebas 
 _El Archivo de las pruebas se llama pruebas.py debe estar en la misma carpeta de calculator.py._
