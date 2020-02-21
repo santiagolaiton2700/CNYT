@@ -96,7 +96,8 @@ Para las pruebas se pudo probar distintas funciones del codigo que garantiza su 
 * Matriz Hermitiana
 * Vector Tensor
 
-
+### Licencia
+_Esta libreria es de uso **GRATUITO
 
 ### Para compilar las pruebas 
 _El Archivo de las pruebas se llama pruebas.py debe estar en la misma carpeta de calculator.py._
