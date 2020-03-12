@@ -50,7 +50,12 @@ def modulo(a):
     b=int(a[0])
     c=int(a[1])
     fin=(b**2+c**2)**0.5
-    return fin
+    return round(fin,2)
+def moduloVectorial(vector):
+    answer=0
+    for i in vector:
+        answer+=modulo(i)
+    return round(answer,2)
 
 def polar_a_cartesiano(a):
     hipotenusa=a[0]
@@ -110,6 +115,22 @@ def multiplicacion_matriz_Escalar(matriz,escalar):
         inversa=multiplicaionVectorEscalar(matriz[i],escalar)
         final.append(inversa)
     return final
+def vectorMatriz(a,c):
+    rowC=len(c)
+    columnsL=len(a[0])
+    if rowC==columnsL:
+        rows=len(a)
+        columns=len(b[0])
+        nueva=[[(0, 0)] * columns for x in range(rows)]
+        for x in range(rows):
+            for y in range(columns):
+                for z in range(len(c)):
+                    multi=multiplicacion_vectores(a[x][z],c[z][y])
+                    nu=nueva[x][y]
+                    nueva[x][y]=(multi[0]+nu[0],multi[1]+nu[1])
+        return nueva
+    else:
+        return false
 
 def matriz_conjugada(matriz):
     final=[]
@@ -205,7 +226,8 @@ def unitaria(matriz1):
                 return False
             elif(i!=k and (estado[0]!=0 or estado[1]!=0)):
                 return False
-    return True 
+    return True
+
 def tensorMatrices(mat1,mat2):
     fin=[]
     for i in range(len(mat1)):
@@ -213,6 +235,13 @@ def tensorMatrices(mat1,mat2):
              fin.append(tensorVector(mat1[i],mat2[j]))
     return fin
 
-
-
-
+###########Ejercicio lineal#############################
+def probabilidad(h,vector):
+    modul=modulo(vector[h])
+    moduloVec=moduloVectorial(vector)
+    proba=(modul/moduloVec)*100
+    return round(proba,0)
+def transicion(vector1,vector2):
+    conju=vector_adjunto(vector2)
+    answer=multiplicacion_vectores(conju,vector1)
+    return answer
